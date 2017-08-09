@@ -1,0 +1,38 @@
+parameters:
+    git_dir: .
+    bin_dir: vendor/bin
+    tasks:
+      phpcsfixer:
+        config_file: ~
+        config: ~
+        fixers: []
+        level: ~
+        verbose: true
+      phpmd:
+        exclude: ['tests', 'database']
+        ruleset: ['phpmd.xml']
+        triggered_by: ['php']
+      phpstan:
+        autoload_file: ~
+        configuration: phpstan.neon
+        level: 4
+        triggered_by: ['php']
+      phpunit:
+        config_file: phpunit.xml
+        testsuite: ~
+        group: []
+        always_execute: false
+      git_blacklist:
+        keywords:
+          - "die("
+          - "var_dump("
+          - "exit;"
+          - "exec("
+          - "shell_exec("
+          - "print_r("
+          - " dd("
+          - "{dd("
+          - "}dd("
+          - ";dd("
+        triggered_by: [php]
+        regexp_type: G
