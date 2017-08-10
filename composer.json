@@ -24,7 +24,7 @@
         ],
         "psr-4": {
             "App\\": "app/",
-            "Tray\\Marketing\\": "src/"
+            "TrayLabs\\Admin\\": "src/"
         }
     },
     "autoload-dev": {

@@ -1,3 +1,15 @@
-# Marketing App
+# TrayLabs Admin
 
-App de marketing para a plataforma de e-commerce.
+Admin dashboard for startups.
+
+# Installation
+
+```ssh
+$ composer install
+
+```
+
+```ssh
+$ yarn
+
+```

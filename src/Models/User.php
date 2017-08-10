@@ -1,6 +1,6 @@
 <?php
 
-namespace Tray\Marketing\Models;
+namespace TrayLabs\Admin\Models;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;

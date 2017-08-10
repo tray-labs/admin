@@ -67,7 +67,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => Tray\Marketing\Models\User::class,
+            'model' => TrayLabs\Admin\Models\User::class,
         ],
 
         // 'users' => [

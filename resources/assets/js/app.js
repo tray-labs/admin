@@ -1,3 +1,4 @@
+/* jshint esversion: 6 */
 
 /**
  * First we will load all of this project's JavaScript dependencies which
@@ -7,16 +8,24 @@
 
 require('./bootstrap');
 
-window.Vue = require('vue');
-
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example', require('./components/Example.vue'));
+// Vue.component('example', require('./components/Example.vue'));
 
+import Vue from 'vue';
+import App from './App.vue';
+import router from './router';
+
+Vue.component('App', require('./App.vue'));
+
+/* eslint-disable no-new */
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    router,
+    template: '<App/>',
+    components: { App },
 });

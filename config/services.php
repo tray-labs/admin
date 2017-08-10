@@ -30,7 +30,7 @@ return [
     ],
 
     'stripe' => [
-        'model' => Tray\Marketing\Models\User::class,
+        'model' => TrayLabs\Admin\Models\User::class,
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],

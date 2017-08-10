@@ -19,6 +19,10 @@
     "vue": "^2.1.10"
   },
   "dependencies": {
-    "locawebstyle": "^3.10.0"
+    "chart.js": "^2.6.0",
+    "css-loader": "^0.28.4",
+    "locawebstyle": "^3.10.0",
+    "vue-chartjs": "^2.8.1",
+    "vue-router": "^2.7.0"
   }
 }
