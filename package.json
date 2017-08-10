@@ -20,7 +20,9 @@
   },
   "dependencies": {
     "chart.js": "^2.6.0",
+    "compass-mixins": "^0.12.10",
     "css-loader": "^0.28.4",
+    "jquery-mask-plugin": "^1.14.11",
     "locawebstyle": "^3.10.0",
     "vue-chartjs": "^2.8.1",
     "vue-router": "^2.7.0"
