@@ -1,0 +1,10 @@
+parameters:
+    ignoreErrors:
+        - '#Call to static method [a-zA-Z0-9\\_]+\(\) on an unknown class [a-zA-Z0-9\\_]+#'
+        - '#Call to an undefined static method Illuminate\\Support\\Facades\\[a-zA-Z0-9\\_]#'
+        - '#Call to an undefined method Illuminate\\Routing\\Route::[a-zA-Z0-9\\_]#'
+        - '#Call to an undefined static method TrayLabs\\Admin\\Models\\[a-zA-Z0-9\\_]+::+[a-zA-Z0-9\\_]+\(\)#'
+        - '#Access to an undefined property Illuminate\\Contracts\\Auth\\Authenticatable::\$[a-zA-Z0-9\\_]#'
+    excludes_analyse:
+        - %rootDir%/../../../tests/*
+        - %rootDir%/../../../database/*

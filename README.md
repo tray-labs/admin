@@ -1,2 +1,15 @@
-# admin
-Boilerplate admin built in Laravel, VueJs &amp; Locawebstyle
+# TrayLabs Admin
+
+Admin dashboard for startups.
+
+# Installation
+
+```ssh
+$ composer install
+
+```
+
+```ssh
+$ yarn
+
+```
