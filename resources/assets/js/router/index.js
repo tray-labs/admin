@@ -2,31 +2,31 @@ import Vue from 'vue';
 import Router from 'vue-router';
 
 // Containers
-import Full from '../containers/Full';
+import Full from '../containers/Full.vue';
 
 // Views
-import Dashboard from '../views/Dashboard';
-import Charts from '../views/Charts';
-import Widgets from '../views/Widgets';
+import Dashboard from '../views/Dashboard.vue';
+import Charts from '../views/Charts.vue';
+import Widgets from '../views/Widgets.vue';
 
 // Views - Components
-import Buttons from '../views/components/Buttons';
-import SocialButtons from '../views/components/SocialButtons';
-import Cards from '../views/components/Cards';
-import Forms from '../views/components/Forms';
-import Modals from '../views/components/Modals';
-import Switches from '../views/components/Switches';
-import Tables from '../views/components/Tables';
+import Buttons from '../views/components/Buttons.vue';
+import SocialButtons from '../views/components/SocialButtons.vue';
+import Cards from '../views/components/Cards.vue';
+import Forms from '../views/components/Forms.vue';
+import Modals from '../views/components/Modals.vue';
+import Switches from '../views/components/Switches.vue';
+import Tables from '../views/components/Tables.vue';
 
 // Views - Icons
-import FontAwesome from '../views/icons/FontAwesome';
-import SimpleLineIcons from '../views/icons/SimpleLineIcons';
+import FontAwesome from '../views/icons/FontAwesome.vue';
+import SimpleLineIcons from '../views/icons/SimpleLineIcons.vue';
 
 // Views - Pages
-import Page404 from '../views/pages/Page404';
-import Page500 from '../views/pages/Page500';
-import Login from '../views/pages/Login';
-import Register from '../views/pages/Register';
+import Page404 from '../views/pages/Page404.vue';
+import Page500 from '../views/pages/Page500.vue';
+import Login from '../views/pages/Login.vue';
+import Register from '../views/pages/Register.vue';
 
 Vue.use(Router);
 
