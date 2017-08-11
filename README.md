@@ -51,6 +51,7 @@ If you want, you can change manually the namespace:
 * https://github.com/tray-labs/admin/blob/master/app/Http/Controllers/Auth/RegisterController.php#L61
 * https://github.com/tray-labs/admin/blob/master/config/auth.php#L70
 * https://github.com/tray-labs/admin/blob/master/config/services.php#L33
+* https://github.com/tray-labs/admin/blob/master/database/factories/ModelFactory.php#L15
 
 Run composer for update namespace:
 ```sh
