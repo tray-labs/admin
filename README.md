@@ -12,21 +12,21 @@ $ composer create-project --prefer-dist tray-labs/admin /path/to/project
 
 Or download a [zip file](https://github.com/tray-labs/admin/archive/master.zip).
 
-Create a database for TrayLabsAdmin:
+Create TrayLabs Admin database:
 ```sql
 CREATE DATABASE admin;
 ```
 
 Setup .env file for database access.
 
-Install dependencies from php:
+Install php dependencies:
 
 ```sh
 $ composer install
 
 ```
 
-Install dependencies from javascript:
+Install javascript dependencies:
 
 ```sh
 $ yarn
@@ -50,6 +50,7 @@ If you want, you can change manually the namespace:
 
 * https://github.com/tray-labs/admin/blob/master/composer.json#L27
 * https://github.com/tray-labs/admin/blob/master/app/Http/Controllers/Auth/RegisterController.php#L5
+* https://github.com/tray-labs/admin/blob/master/app/Http/Controllers/Auth/RegisterController.php#L61
 * https://github.com/tray-labs/admin/blob/master/config/auth.php#L70
 * https://github.com/tray-labs/admin/blob/master/config/services.php#L33
 
