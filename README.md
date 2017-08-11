@@ -1,6 +1,6 @@
 # TrayLabs Admin
 
-Admin dashboard for startups.
+Admin dashboard for startups based in [locawebstyle-tray](https://github.com/tray-tecnologia/locawebstyle-tray).
 
 ## Installation
 
@@ -12,33 +12,31 @@ $ composer create-project --prefer-dist tray-labs/admin /path/to/project
 
 Or download a [zip file](https://github.com/tray-labs/admin/archive/master.zip).
 
-Create TrayLabs Admin database:
+**Create TrayLabs Admin database:**
 ```sql
 CREATE DATABASE admin;
 ```
 
-Setup .env file for database access.
+**Setup .env file for database access.**
 
-Install php dependencies:
+**Install php dependencies:**
 
 ```sh
 $ composer install
-
 ```
 
-Install javascript dependencies:
+**Install javascript dependencies:**
 
 ```sh
 $ yarn
-
 ```
 
-Run npm to compile:
+**Run npm to compile:**
 ```sh
 $ npm run dev
 ```
 
-Run migrations:
+**Run migrations:**
 ```sh
 $ php artisan migrate
 ```
