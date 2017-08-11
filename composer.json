@@ -1,7 +1,7 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "name": "tray-labs/admin",
+    "description": "TrayLabs Admin",
+    "keywords": ["traylabs", "tray", "laravel", "vue", "locastyle", "locawebstyle", "locaweb", "admin", "dashboard"],
     "license": "MIT",
     "type": "project",
     "require": {
