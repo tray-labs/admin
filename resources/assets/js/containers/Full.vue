@@ -2,14 +2,15 @@
   <div class="app">
     <Topbar/>
     <div class="app-body">
+      <AppAside/>
       <main class="ls-main">
         <breadcrumb :list="list"/>
         <div class="container-fluid">
           <router-view></router-view>
         </div>
         <AppFooter/>
+        <AppNotification/>
       </main>
-      <AppAside/>
     </div>
   </div>
 </template>
@@ -18,6 +19,7 @@
 import Topbar from '../components/Topbar'
 import AppAside from '../components/Aside'
 import AppFooter from '../components/Footer'
+import AppNotification from '../components/Notification'
 import Breadcrumb from '../components/Breadcrumb'
 
 export default {
@@ -26,6 +28,7 @@ export default {
     Topbar,
     AppAside,
     AppFooter,
+    AppNotification,
     Breadcrumb
   },
   computed: {
