@@ -4,7 +4,7 @@
         <div class="ls-notification-topbar">
             <!-- Links de apoio -->
             <div class="ls-alerts-list">
-                <a href="#" class="ls-ico-bell-o" data-counter="8" data-ls-module="topbarCurtain" data-target="#ls-notification-curtain">
+                <a href="#" class="ls-ico-bell-o" data-counter="5" data-ls-module="topbarCurtain" data-target="#ls-notification-curtain">
                     <span>Notificações</span>
                 </a>
                 <a href="#" class="ls-ico-bullhorn" data-ls-module="topbarCurtain" data-target="#ls-help-curtain">
@@ -44,9 +44,9 @@
         </a>
         <!-- Nome do produto/marca com sidebar -->
         <h1 class="ls-brand-name">
-            <a href="home" class="ls-ico-earth">
+            <router-link :to="'/dashboard'" class="ls-ico-earth">
                 <small>TrayLabs</small>Admin
-            </a>
+            </router-link>
         </h1>
         <!-- Nome do produto/marca sem sidebar quando for o pre-painel  -->
     </div>
