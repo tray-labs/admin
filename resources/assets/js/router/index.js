@@ -6,6 +6,7 @@ import Full from '../containers/Full.vue';
 
 // Views
 import Dashboard from '../views/Dashboard.vue';
+import Home from '../views/Home.vue';
 import Charts from '../views/Charts.vue';
 import Widgets from '../views/Widgets.vue';
 
@@ -37,10 +38,15 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/dashboard',
+      redirect: '/home',
       name: 'Home',
       component: Full,
       children: [
+        {
+          path: '/home',
+          name: 'Home',
+          component: Home
+        },
         {
           path: 'dashboard',
           name: 'Dashboard',

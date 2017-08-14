@@ -39,12 +39,12 @@
             </div>
         </div>
         <span class="ls-show-sidebar ls-ico-menu"></span>
-        <a href="#" class="ls-go-next">
+        <router-link class="ls-go-next" :to="lastUrl">
             <span class="ls-text">Voltar</span>
-        </a>
+        </router-link>
         <!-- Nome do produto/marca com sidebar -->
         <h1 class="ls-brand-name">
-            <router-link :to="'/dashboard'" class="ls-ico-earth">
+            <router-link :to="'/home'" class="ls-ico-earth">
                 <small>TrayLabs</small>Admin
             </router-link>
         </h1>
@@ -54,8 +54,15 @@
 
 <script>
     export default {
-        mounted() {
-            console.log('Component mounted.')
+        data() {
+            return {
+                lastUrl: ''
+            }
+        },
+        watch: {
+            '$route' (to, from) {
+                this.lastUrl = from.path;
+            }
         }
     }
 </script>
