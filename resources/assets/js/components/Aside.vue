@@ -10,7 +10,7 @@
                         <router-link :to="'/dashboard'" class="ls-ico-dashboard" title="Dashboard">Dashboard</router-link>
                     </li>
                     <li>
-                        <a href="/locawebstyle/documentacao/exemplos/painel1/clients" class="ls-ico-users" title="Clientes">Clientes</a>
+                        <router-link :to="'/customers'" class="ls-ico-users" title="Clientes">Clientes</router-link>
                     </li>
                     <li>
                         <a href="/locawebstyle/documentacao/exemplos/painel1/stats" class="ls-ico-stats" title="Relatórios da revenda">Relatórios da revenda</a>

@@ -1,29 +1,57 @@
 <template>
-    <ol class="ls-breadcrumb">
-        <li v-for="(item, index) in list"><a href="#">Início</a>
-            <span class="active" v-if="isLast(index)">{{ showName(item) }}</span>
-            <router-link :to="item.path" v-else>{{ showName(item) }}</router-link>
+    <ol v-if="hasMetaLabel" class="ls-breadcrumb">
+        <li v-for="(item, index) in breadcrumbs">
+            <span class="active" v-if="!item.name">{{ item.label }}</span>
+            <router-link :to="{name: item.name}" v-else>{{ item.label }}</router-link>
         </li>
     </ol>
 </template>
 
 <script>
-export default {
-  props: {
-    list: {
-      type: Array,
-      required: true,
-      default: () => []
-    },
-    separator: String
-  },
-  methods: {
-    isLast (index) {
-      return index === this.list.length - 1
-    },
-    showName (item) {
-      return item.meta && item.meta.label || item.name
+    export default {
+        data() {
+            return {
+                breadcrumbs: [],
+                hasMetaLabel: true
+            }
+        },
+        watch: {
+            '$route' () {
+                this.createBreadCrumb();
+            }
+        },
+        methods: {
+            createBreadCrumb: function () {
+                this.breadcrumbs = [];
+                let routeMetaData = this.$route.meta;
+                if(this.$route.meta.label == undefined) {
+                    return this.hasMetaLabel = false;
+                } else if(routeMetaData.breadcrumb) {
+                    let pieces = routeMetaData.breadcrumb.split('.');
+                    for(let count = 0; count < pieces.length; count++) {
+                        console.log(pieces[count]);
+                        let previousRoute = this.$router.resolve({name: pieces[count]}).route;
+                        this.addPreviousUrl(previousRoute.meta.label, previousRoute.name);
+                    }
+                }
+                this.addCurrentUrl(routeMetaData.label);
+                console.log(this.breadcrumbs);
+            },
+            addPreviousUrl: function (label, routeName) {
+                this.breadcrumbs.push({
+                    label: label,
+                    name: routeName
+                });
+            },
+            addCurrentUrl: function (label) {
+                this.breadcrumbs.push({
+                    label: label
+                });
+            }
+        },
+        mounted() {
+            this.createBreadCrumb();
+            console.log(this.breadcrumbs);
+        }
     }
-  }
-}
 </script>
