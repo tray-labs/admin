@@ -9,7 +9,7 @@
                 datasets: [
                     {
                         label: 'Agosto/2014',
-                        backgroundColor: '#1ab551',
+                        backgroundColor: '#254fa2',
                         data: [25, 50, 20, 3]
                     }
                 ]
