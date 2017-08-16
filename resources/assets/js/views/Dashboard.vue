@@ -73,6 +73,7 @@
             <h2 class="ls-title-3">Clientes que mais contrataram</h2>
             <a href="#" class="ls-btn ls-btn-sm">Ver mais relatórios</a>
         </header>
+        <BarExample></BarExample>
     </div>
     <div class="row">
         <div class="col-md-6">
@@ -152,16 +153,18 @@ import CardLine3ChartExample from './dashboard/CardLine3ChartExample'
 import CardBarChartExample from './dashboard/CardBarChartExample'
 import MainChartExample from './dashboard/MainChartExample'
 import SocialBoxChartExample from './dashboard/SocialBoxChartExample'
+import BarExample from './charts/BarExample.vue'
 
 export default {
-  name: 'dashboard',
-  components: {
-    CardLine1ChartExample,
-    CardLine2ChartExample,
-    CardLine3ChartExample,
-    CardBarChartExample,
-    MainChartExample,
-    SocialBoxChartExample
-  }
+    name: 'dashboard',
+    components: {
+        CardLine1ChartExample,
+        CardLine2ChartExample,
+        CardLine3ChartExample,
+        CardBarChartExample,
+        MainChartExample,
+        SocialBoxChartExample,
+        BarExample
+    }
 }
 </script>
