@@ -35,11 +35,7 @@ import Register from '../views/pages/Register.vue';
 
 Vue.use(Router);
 
-export default new Router({
-    mode: 'hash', // hash or hash = Demo is living in GitHub.io, so required!
-    linkActiveClass: 'open active',
-    scrollBehavior: () => ({ y: 0 }),
-    routes: [
+const routes = [
     {
         path: '/',
         redirect: '/home',
@@ -49,32 +45,55 @@ export default new Router({
             {
                 path: '/home',
                 name: 'home',
-                component: Home
+                component: Home,
+                meta: {
+                    label: 'Home'
+                }
             },
             {
                 path: 'dashboard',
                 name: 'dashboard',
-                component: Dashboard
+                component: Dashboard,
+                meta: {
+                    label: 'Dashboard',
+                    breadcrumb: 'home'
+                }
             },
             {
                 path: 'customers',
                 name: 'customers',
                 component: Customers,
+                meta: {
+                    label: 'Clientes',
+                    breadcrumb: 'home'
+                }
             },
             {
                 path: '/customers/newcustomer',
                 name: 'newcustomer',
-                component: NewCustomer
+                component: NewCustomer,
+                meta: {
+                    breadcrumb: 'home.customers',
+                    label: 'Novo Cliente'
+                }
             },
             {
                 path: '/customers/newcustomer/nocustomers',
                 name: 'nocustomers',
-                component: NoCustomers
+                component: NoCustomers,
+                meta: {
+                    breadcrumb: 'home.customers.newcustomer',
+                    label: 'Sem Clientes'
+                }
             },
             {
-                path: '/customers/newcustomer/customer',
+                path: '/customer',
                 name: 'customer',
-                component: Customer
+                component: Customer,
+                meta: {
+                    breadcrumb: 'home.customers',
+                    label: 'Cliente'
+                }
             },
             {
                 path: 'charts',
@@ -183,5 +202,11 @@ export default new Router({
             }
         ]
     }
-]
+];
+
+export default new Router({
+    mode: 'hash', // hash or hash = Demo is living in GitHub.io, so required!
+    linkActiveClass: 'open active',
+    scrollBehavior: () => ({ y: 0 }),
+    routes: routes
 });

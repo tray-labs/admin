@@ -1,55 +1,57 @@
 <template>
-    <ol class="ls-breadcrumb">
-        <li v-for="(item, index) in currentUrl">
-            <span class="active" v-if="isLast(index)">{{ item.name }}</span>
-            <router-link :to="'/home'" v-else-if="isFirst(index)">{{ item.name }}</router-link>
-            <router-link :to="{name: item.route}" v-else>{{ item.name }}</router-link>
+    <ol v-if="hasMetaLabel" class="ls-breadcrumb">
+        <li v-for="(item, index) in breadcrumbs">
+            <span class="active" v-if="!item.name">{{ item.label }}</span>
+            <router-link :to="{name: item.name}" v-else>{{ item.label }}</router-link>
         </li>
     </ol>
 </template>
 
 <script>
     export default {
-        props: {
-            list: {
-                type: Array,
-                required: true,
-                default: () => []
-            },
-            separator: String
-        },
         data() {
             return {
-                currentUrl: []
+                breadcrumbs: [],
+                hasMetaLabel: true
             }
         },
         watch: {
             '$route' () {
-                this.breadCrumb();
+                this.createBreadCrumb();
             }
         },
         methods: {
-            isLast (index) {
-                return index === this.currentUrl.length - 1
+            createBreadCrumb: function () {
+                this.breadcrumbs = [];
+                let routeMetaData = this.$route.meta;
+                if(this.$route.meta.label == undefined) {
+                    return this.hasMetaLabel = false;
+                } else if(routeMetaData.breadcrumb) {
+                    let pieces = routeMetaData.breadcrumb.split('.');
+                    for(let count = 0; count < pieces.length; count++) {
+                        console.log(pieces[count]);
+                        let previousRoute = this.$router.resolve({name: pieces[count]}).route;
+                        this.addPreviousUrl(previousRoute.meta.label, previousRoute.name);
+                    }
+                }
+                this.addCurrentUrl(routeMetaData.label);
+                console.log(this.breadcrumbs);
             },
-            isFirst (index) {
-                return index === 0
-            },
-            upperFirstLetter (string) {
-                return string.charAt(0).toUpperCase() + string.slice(1);
-            },
-            breadCrumb () {
-                let vm = this;
-                this.currentUrl = [];
-                this.$route.path.split("/").forEach(function(val) {
-                    vm.currentUrl.push({ name: vm.upperFirstLetter(val), route: val});
+            addPreviousUrl: function (label, routeName) {
+                this.breadcrumbs.push({
+                    label: label,
+                    name: routeName
                 });
-                this.currentUrl[0].name = 'Home';
-                this.currentUrl[0].route = 'home';
+            },
+            addCurrentUrl: function (label) {
+                this.breadcrumbs.push({
+                    label: label
+                });
             }
         },
         mounted() {
-            this.breadCrumb();
+            this.createBreadCrumb();
+            console.log(this.breadcrumbs);
         }
     }
 </script>

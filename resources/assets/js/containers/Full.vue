@@ -4,7 +4,7 @@
     <div class="app-body">
       <AppAside/>
       <main class="ls-main">
-        <breadcrumb :list="list"/>
+        <breadcrumb/>
         <div class="container-fluid">
           <router-view></router-view>
         </div>
