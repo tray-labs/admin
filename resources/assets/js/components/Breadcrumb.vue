@@ -1,10 +1,11 @@
 <template>
-    <ol v-if="hasMetaLabel" class="ls-breadcrumb">
-        <li v-for="(item, index) in breadcrumbs">
-            <span class="active" v-if="!item.name">{{ item.label }}</span>
-            <router-link :to="{name: item.name}" v-else>{{ item.label }}</router-link>
-        </li>
-    </ol>
+    <div class="ls-title-intro ls-no-margin-bottom ls-no-border">
+        <ol v-if="hasMetaLabel" class="ls-breadcrumb ls-no-border">
+            <li class="ls-no-padding-left" v-for="(item, index) in breadcrumbs">
+                <router-link :to="{name: item.name}">{{ item.label }}</router-link>
+            </li>
+        </ol>
+    </div>
 </template>
 
 <script>
@@ -35,7 +36,6 @@
                     }
                 }
                 this.addCurrentUrl(routeMetaData.label);
-                console.log(this.breadcrumbs);
             },
             addPreviousUrl: function (label, routeName) {
                 this.breadcrumbs.push({
@@ -51,7 +51,6 @@
         },
         mounted() {
             this.createBreadCrumb();
-            console.log(this.breadcrumbs);
         }
     }
 </script>

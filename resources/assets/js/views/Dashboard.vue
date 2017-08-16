@@ -1,6 +1,6 @@
 <template>
 <div>
-    <h1 class="ls-title-intro ls-ico-dashboard">Dashboard</h1>
+    <h1 class="ls-title-intro ls-ico-home ls-no-border ls-no-padding-top ls-lg-margin-bottom">Dashboard</h1>
     <div class="ls-box ls-board-box">
         <header class="ls-info-header">
             <p class="ls-float-right ls-float-none-xs ls-small-info">Valido até <strong>01.05.2014</strong></p>

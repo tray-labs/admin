@@ -4,11 +4,10 @@
     <div class="app-body">
       <AppAside/>
       <main class="ls-main">
-        <breadcrumb/>
         <div class="container-fluid">
+          <breadcrumb/>
           <router-view></router-view>
         </div>
-        <AppFooter/>
         <AppNotification/>
       </main>
     </div>
@@ -16,29 +15,29 @@
 </template>
 
 <script>
-import Topbar from '../components/Topbar'
-import AppAside from '../components/Aside'
-import AppFooter from '../components/Footer'
-import AppNotification from '../components/Notification'
-import Breadcrumb from '../components/Breadcrumb'
+    import Topbar from '../components/Topbar'
+    import AppAside from '../components/Aside'
+    import AppFooter from '../components/Footer'
+    import AppNotification from '../components/Notification'
+    import Breadcrumb from '../components/Breadcrumb'
 
-export default {
-  name: 'full',
-  components: {
-    Topbar,
-    AppAside,
-    AppFooter,
-    AppNotification,
-    Breadcrumb
-  },
-  computed: {
-    name () {
-      return this.$route.name
-    },
+    export default {
+        name: 'full',
+        components: {
+            Topbar,
+            AppAside,
+            AppFooter,
+            AppNotification,
+            Breadcrumb
+        },
+        computed: {
+            name () {
+                return this.$route.name
+            },
 
-    list () {
-      return this.$route.matched
+            list () {
+                return this.$route.matched
+            }
+        }
     }
-  }
-}
 </script>

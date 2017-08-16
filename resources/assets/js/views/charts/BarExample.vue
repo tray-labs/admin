@@ -8,7 +8,7 @@
                 labels: ['Joana', 'Marcela', 'Patricia', 'Diego'],
                 datasets: [
                     {
-                        label: 'Agosto/2014',
+                        label: 'Total de envios contratados em Agosto/2014',
                         backgroundColor: '#254fa2',
                         data: [25, 50, 20, 3]
                     }
