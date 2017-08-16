@@ -47,7 +47,7 @@ const routes = [
                 name: 'home',
                 component: Home,
                 meta: {
-                    label: 'Home'
+                    label: 'Início'
                 }
             },
             {

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1 class="ls-title-intro ls-ico-users">Cadastrar cliente</h1>
+        <h1 class="ls-title-intro ls-ico-home ls-no-border ls-no-padding-top ls-lg-margin-bottom">Cadastrar cliente</h1>
 
         <form class="ls-form">
             <legend class="ls-title-2">Identificação</legend>

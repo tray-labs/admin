@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1 class="ls-title-intro ls-ico-users">Clientes</h1>
+        <h1 class="ls-title-intro ls-ico-home ls-no-border ls-no-padding-top ls-lg-margin-bottom">Clientes</h1>
 
         <router-link :to="{ name: 'newcustomer'}" class="ls-btn-primary">Cadastrar novo</router-link>
 
