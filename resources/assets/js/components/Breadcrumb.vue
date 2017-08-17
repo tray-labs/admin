@@ -18,6 +18,7 @@
         },
         watch: {
             '$route' () {
+                locastyle.init();
                 this.createBreadCrumb();
             }
         },
