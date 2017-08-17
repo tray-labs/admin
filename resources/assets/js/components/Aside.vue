@@ -19,7 +19,7 @@
                         <router-link :to="'/items'" class="ls-ico-users" title="Lista de Itens">Lista de Itens</router-link>
                     </li>
                     <li>
-                        <router-link :to="'/items'" class="ls-ico-table-alt" title="Pagina de aplicativo">Pagina de aplicativo</router-link>
+                        <router-link :to="'/apps'" class="ls-ico-table-alt" title="Pagina de aplicativo">Pagina de aplicativo</router-link>
                     </li>
                 </ul>
             </nav>

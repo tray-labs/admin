@@ -10,6 +10,7 @@ import Home from '../views/Home.vue';
 import Customers from '../views/Customers.vue';
 import NewCustomer from '../views/customers/NewCustomer.vue';
 import NoCustomers from '../views/customers/NoCustomers.vue';
+import Apps from '../views/Apps.vue';
 import Customer from '../views/customers/Customer.vue';
 import Items from '../views/Items.vue';
 import AddItem from '../views/items/AddItem.vue';
@@ -113,6 +114,15 @@ const routes = [
                 meta: {
                     label: 'Incluir Item',
                     breadcrumb: 'home.items'
+                }
+            },
+            {
+                path: 'apps',
+                name: 'apps',
+                component: Apps,
+                meta: {
+                    label: 'Apps',
+                    breadcrumb: 'home'
                 }
             },
             {
