@@ -11,6 +11,8 @@ import Customers from '../views/Customers.vue';
 import NewCustomer from '../views/customers/NewCustomer.vue';
 import NoCustomers from '../views/customers/NoCustomers.vue';
 import Customer from '../views/customers/Customer.vue';
+import Items from '../views/Items.vue';
+import AddItem from '../views/items/AddItem.vue';
 import Charts from '../views/Charts.vue';
 import Widgets from '../views/Widgets.vue';
 
@@ -93,6 +95,24 @@ const routes = [
                 meta: {
                     breadcrumb: 'home.customers',
                     label: 'Cliente'
+                }
+            },
+            {
+                path: 'items',
+                name: 'items',
+                component: Items,
+                meta: {
+                    label: 'Itens',
+                    breadcrumb: 'home'
+                }
+            },
+            {
+                path: 'items/add',
+                name: 'additem',
+                component: AddItem,
+                meta: {
+                    label: 'Incluir Item',
+                    breadcrumb: 'home.items'
                 }
             },
             {
