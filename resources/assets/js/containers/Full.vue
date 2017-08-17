@@ -1,17 +1,17 @@
 <template>
-  <div class="app">
-    <Topbar/>
-    <div class="app-body">
-      <AppAside/>
-      <main class="ls-main">
-        <div class="container-fluid">
-          <breadcrumb/>
-          <router-view></router-view>
+    <div class="app">
+        <Topbar/>
+        <div class="app-body">
+            <AppAside/>
+            <main class="ls-main">
+                <div class="container-fluid ls-lg-margin-bottom">
+                    <breadcrumb/>
+                    <router-view></router-view>
+                </div>
+                <AppNotification/>
+            </main>
         </div>
-        <AppNotification/>
-      </main>
     </div>
-  </div>
 </template>
 
 <script>
