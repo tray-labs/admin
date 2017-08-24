@@ -8,17 +8,10 @@
 
     <title>Admin</title>
 
-    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-
-    <script>
-        window.Laravel = {!! json_encode([
-            'csrfToken' => csrf_token(),
-        ]) !!};
-    </script>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
-    <div id="app"></div>
-    <script src="{{ mix('js/vendor.js') }}"></script>
-    <script src="{{ mix('js/app.js') }}"></script>
+@yield('content')
+<script src="{{ mix('js/vendor.js') }}"></script>
 </body>
 </html>

@@ -31,7 +31,6 @@
                 } else if(routeMetaData.breadcrumb) {
                     let pieces = routeMetaData.breadcrumb.split('.');
                     for(let count = 0; count < pieces.length; count++) {
-                        console.log(pieces[count]);
                         let previousRoute = this.$router.resolve({name: pieces[count]}).route;
                         this.addPreviousUrl(previousRoute.meta.label, previousRoute.name);
                     }
