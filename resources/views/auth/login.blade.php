@@ -16,8 +16,8 @@
                         <fieldset>
 
                             <label class="ls-label">
-                                <b class="ls-label-text ls-hidden-accessible">Usuário</b>
-                                <input class="ls-login-bg-user ls-field-lg" type="text" placeholder="Usuário" name="username" required autofocus>
+                                <b class="ls-label-text ls-hidden-accessible">Email</b>
+                                <input class="ls-login-bg-user ls-field-lg" type="email" placeholder="Email" name="email" required autofocus>
                             </label>
 
                             <label class="ls-label">
