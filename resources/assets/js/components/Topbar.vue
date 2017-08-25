@@ -20,7 +20,7 @@
                             <a href="#">Planos</a>
                         </li>
                         <li>
-                            <a href="#">Sair</a>
+                            <a href="/logout">Sair</a>
                         </li>
                     </ul>
                 </nav>

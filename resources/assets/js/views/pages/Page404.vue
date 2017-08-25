@@ -1,28 +1,26 @@
 <template>
-  <div class="app flex-row align-items-center">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-6">
-          <div class="clearfix">
-            <h1 class="float-left display-3 mr-2">404</h1>
-            <h4 class="pt-1">Oops! You're lost.</h4>
-            <p class="text-muted">The page you are looking for was not found.</p>
-          </div>
-          <div class="input-prepend input-group">
-            <span class="input-group-addon"><i class="fa fa-search"></i></span>
-            <input id="prependedInput" class="form-control" size="16" type="text" placeholder="What are you looking for?">
-            <span class="input-group-btn">
-              <button class="btn btn-info" type="button">Search</button>
-            </span>
-          </div>
+    <div class="app">
+        <div class="app-body">
+            <div class="ls-txt-center-all">
+                <div class="ls-box ls-no-bg ls-box-error">
+                    <h1 class="ls-title-intro ls-ico-close">Página não encontrada</h1>
+                    <p>O conteúdo pode ter sido removido ou não estar mais disponível.</p>
+
+                    <p><strong>Você pode:</strong></p>
+                    <ol>
+                        <li>Verificar se digitou corretamente o endereço desejado.</li>
+                        <li>Retornar à <router-link :to="'/'" class="ls-color-theme">página inicial.</router-link></li>
+                    </ol>
+                    <p>Se o problema persistir, entre em contato através de um dos <router-link :to="'/'">canais de atendimento</router-link>.</p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </template>
 
 <script>
-export default {
-  name: 'Page404'
-}
+
+    export default {
+        name: 'Page404'
+    }
 </script>

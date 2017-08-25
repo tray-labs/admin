@@ -8,7 +8,6 @@
                     <breadcrumb/>
                     <router-view></router-view>
                 </div>
-                <AppNotification/>
             </main>
         </div>
     </div>
@@ -18,7 +17,6 @@
     import Topbar from '../components/Topbar'
     import AppAside from '../components/Aside'
     import AppFooter from '../components/Footer'
-    import AppNotification from '../components/Notification'
     import Breadcrumb from '../components/Breadcrumb'
 
     export default {
@@ -27,7 +25,6 @@
             Topbar,
             AppAside,
             AppFooter,
-            AppNotification,
             Breadcrumb
         },
         computed: {

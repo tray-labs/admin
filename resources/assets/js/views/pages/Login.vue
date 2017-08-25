@@ -1,45 +1,35 @@
 <template>
-  <div class="app flex-row align-items-center">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-8">
-          <div class="card-group mb-0">
-            <div class="card p-2">
-              <div class="card-block">
-                <h1>Login</h1>
-                <p class="text-muted">Sign In to your account</p>
-                <div class="input-group mb-1">
-                  <span class="input-group-addon"><i class="icon-user"></i></span>
-                  <input type="text" class="form-control" placeholder="Username">
+    <div class="ls-login-parent">
+        <div class="ls-login-inner">
+            <div class="ls-login-container">
+                <div class="ls-login-box">
+                    <h1 class="ls-login-logo"><img title="Logo login" src="../../assets/logo-locaweb.png" /></h1>
+                    <form role="form" class="ls-form ls-login-form" action="#">
+                        <fieldset>
+
+                            <label class="ls-label">
+                                <b class="ls-label-text ls-hidden-accessible">Usuário</b>
+                                <input class="ls-login-bg-user ls-field-lg" type="text" placeholder="Usuário" required autofocus>
+                            </label>
+
+                            <label class="ls-label">
+                                <b class="ls-label-text ls-hidden-accessible">Senha</b>
+                                <div class="ls-prefix-group ls-field-lg">
+                                    <input id="password_field" class="ls-login-bg-password" type="password" placeholder="Senha" required>
+                                    <a class="ls-label-text-prefix ls-toggle-pass ls-ico-eye" data-toggle-class="ls-ico-eye, ls-ico-eye-blocked" data-target="#password_field" href="#"></a>
+                                </div>
+                            </label>
+
+                            <p><a class="ls-login-forgot" href="forgot-password">Esqueci minha senha</a></p>
+
+                            <input type="submit" value="Entrar" class="ls-btn-primary ls-btn-block ls-btn-lg">
+                            <p class="ls-txt-center ls-login-signup">Não possui um usuário na Locaweb? <a href="#">Cadastre-se agora</a></p>
+                        </fieldset>
+                    </form>
                 </div>
-                <div class="input-group mb-2">
-                  <span class="input-group-addon"><i class="icon-lock"></i></span>
-                  <input type="password" class="form-control" placeholder="Password">
-                </div>
-                <div class="row">
-                  <div class="col-6">
-                    <button type="button" class="btn btn-primary px-2">Login</button>
-                  </div>
-                  <div class="col-6 text-right">
-                    <button type="button" class="btn btn-link px-0">Forgot password?</button>
-                  </div>
-                </div>
-              </div>
             </div>
-            <div class="card card-inverse card-primary py-3 hidden-md-down" style="width:44%">
-              <div class="card-block text-center">
-                <div>
-                  <h2>Sign up</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <button type="button" class="btn btn-primary active mt-1">Register Now!</button>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
 </template>
 
 <script>
