@@ -36,9 +36,9 @@ $ yarn
 $ npm run dev
 ```
 
-**Run migrations:**
+**Run migrations and seeds:**
 ```sh
-$ php artisan migrate
+$ php artisan migrate --seed
 ```
 
 ## Configuration
@@ -52,11 +52,17 @@ If you want, you can change manually the namespace:
 * https://github.com/tray-labs/admin/blob/master/config/auth.php#L70
 * https://github.com/tray-labs/admin/blob/master/config/services.php#L33
 * https://github.com/tray-labs/admin/blob/master/database/factories/ModelFactory.php#L15
+* https://github.com/tray-labs/admin/blob/master/database/seeds/UserTableSeeder.php#L4
 
 Run composer for update namespace:
 ```sh
 $ composer dump
 ```
+
+## Default Login
+
+* **username:** trayuser@tray.com.br
+* **password:** tray2017
 
 ## License
 
