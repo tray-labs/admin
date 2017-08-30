@@ -1,9 +1,6 @@
 <template>
     <aside class="ls-sidebar">
         <div class="ls-sidebar-inner">
-            <a href="/locawebstyle/documentacao/exemplos//pre-painel" class="ls-go-prev">
-                <span class="ls-text">Voltar à lista de serviços</span>
-            </a>
             <nav class="ls-menu">
                 <ul>
                     <li>
