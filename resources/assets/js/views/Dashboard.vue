@@ -82,7 +82,7 @@
                     <div class="ls-box">
                         <header class="ls-info-header">
                             <h2 class="ls-title-3">Clientes que mais contrataram</h2>
-                            <a href="#" class="ls-btn ls-btn-sm">Ver todos</a>
+                            <router-link :to="{ name: 'customers'}" class="ls-btn ls-btn-sm">Ver todos</router-link>
                         </header>
 
                         <table class="ls-table">
@@ -94,15 +94,15 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><a href="/locawebstyle/documentacao/exemplos/painel1/client">João da Silva</a> </td>
+                                    <td><router-link :to="{ name: 'customer'}">João da Silva</router-link></td>
                                     <td>10.04.2014</td>
                                 </tr>
                                 <tr>
-                                    <td><a href="/locawebstyle/documentacao/exemplos/painel1/client">João da Silva</a> </td>
+                                    <td><router-link :to="{ name: 'customer'}">João da Silva</router-link></td>
                                     <td>10.04.2014</td>
                                 </tr>
                                 <tr>
-                                    <td><a href="/locawebstyle/documentacao/exemplos/painel1/client">João da Silva</a> </td>
+                                    <td><router-link :to="{ name: 'customer'}">João da Silva</router-link></td>
                                     <td>10.04.2014</td>
                                 </tr>
                             </tbody>
@@ -117,7 +117,7 @@
                     <div class="ls-box">
                         <header class="ls-info-header">
                             <h2 class="ls-title-3">Clientes bloqueados por bounce</h2>
-                            <a href="/locawebstyle/documentacao/exemplos/painel1/clients" class="ls-btn ls-btn-sm">Ver todos</a>
+                            <router-link :to="{ name: 'customers'}" class="ls-btn ls-btn-sm">Ver todos</router-link>
                         </header>
 
                         <table class="ls-table">
@@ -128,13 +128,13 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><a href="/locawebstyle/documentacao/exemplos/painel1/client">João da Silva</a> </td>
+                                    <td><router-link :to="{ name: 'customer'}">João da Silva</router-link></td>
                                 </tr>
                                 <tr>
-                                    <td><a href="/locawebstyle/documentacao/exemplos/painel1/client">João da Silva</a> </td>
+                                    <td><router-link :to="{ name: 'customer'}">João da Silva</router-link></td>
                                 </tr>
                                 <tr>
-                                    <td><a href="/locawebstyle/documentacao/exemplos/painel1/client">João da Silva</a> </td>
+                                    <td><router-link :to="{ name: 'customer'}">João da Silva</router-link></td>
                                 </tr>
                             </tbody>
                         </table>

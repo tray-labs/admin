@@ -16,7 +16,6 @@
 <script>
     import Topbar from '../components/Topbar'
     import AppAside from '../components/Aside'
-    import AppFooter from '../components/Footer'
     import Breadcrumb from '../components/Breadcrumb'
 
     export default {
@@ -24,7 +23,6 @@
         components: {
             Topbar,
             AppAside,
-            AppFooter,
             Breadcrumb
         },
         computed: {
